@@ -58,3 +58,20 @@ document.querySelector('.voiceSearchBtn').addEventListener('click',()=>{
         location.href = "notebook.html"
     }
 })
+
+document.addEventListener('DOMContentLoaded', function () {
+    const openBtn = document.querySelector('.openFormBtn');
+    const modal = document.getElementById('formModal');
+
+    openBtn.addEventListener('click', function () {
+        modal.style.display = 'block';
+    });
+
+    // 自动关闭表单：Formspree 会跳转，但若你想在当前页弹窗关闭，可监听 submit 事件
+    const form = document.getElementById('popupForm');
+    form.addEventListener('submit', function () {
+        setTimeout(() => {
+            modal.style.display = 'none';
+        }, 500); // 稍作延迟，避免用户误以为没提交成功
+    });
+});
