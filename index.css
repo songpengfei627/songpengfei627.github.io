@@ -386,3 +386,8 @@ table td .addCart:hover {
     background-color: #888;
 }
 
+.inline-options {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
