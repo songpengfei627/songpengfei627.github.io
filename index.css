@@ -355,20 +355,27 @@ table td .addCart:hover {
     vertical-align: middle;
 }
 
-.submitBtn, .cancelBtn {
+.submitBtn {
     background-color: #5F91DA;
     color: #fff;
-    padding: 10px 20px;
-    margin: 0 10px;
+    padding: 10px 30px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    margin: 0 10px;
     transition: background-color 0.3s ease;
 }
 
 .cancelBtn {
     background-color: #aaa;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
 }
 
 .submitBtn:hover {
@@ -377,18 +384,5 @@ table td .addCart:hover {
 
 .cancelBtn:hover {
     background-color: #888;
-}
-
-.openFormBtn {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    padding: 12px 24px;
-    background-color: #5F91DA;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    z-index: 1000;
 }
 
