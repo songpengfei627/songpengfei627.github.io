@@ -60,18 +60,25 @@ document.querySelector('.voiceSearchBtn').addEventListener('click',()=>{
 })
 
 document.addEventListener('DOMContentLoaded', function () {
-    const openBtn = document.querySelector('.openFormBtn');
     const modal = document.getElementById('formModal');
+    const form = document.getElementById('popupForm');
+    const cancelBtn = document.getElementById('cancelBtn');
 
-    openBtn.addEventListener('click', function () {
+    // ✅ 页面加载后 3 秒显示弹窗
+    setTimeout(() => {
         modal.style.display = 'block';
+    }, 3000);
+
+    // ✅ 点击“暂不填写”关闭弹窗
+    cancelBtn.addEventListener('click', function () {
+        modal.style.display = 'none';
     });
 
-    // 自动关闭表单：Formspree 会跳转，但若你想在当前页弹窗关闭，可监听 submit 事件
-    const form = document.getElementById('popupForm');
+    // ✅ 表单提交后延迟隐藏弹窗（避免用户误以为没反应）
     form.addEventListener('submit', function () {
         setTimeout(() => {
             modal.style.display = 'none';
-        }, 500); // 稍作延迟，避免用户误以为没提交成功
+        }, 500);
     });
 });
+
