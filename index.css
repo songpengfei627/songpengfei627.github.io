@@ -308,13 +308,27 @@ table td .addCart:hover {
     color: #5F91DA;
 }
 
-.form-box {
-    width: 600px;
-    margin: 0 auto 50px;
+.formModal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.formContent {
+    background-color: #fff;
+    margin: 80px auto;
     padding: 30px;
-    border: 1px solid #ccc;
     border-radius: 10px;
-    background-color: #f9f9f9;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 .form-row {
@@ -341,10 +355,11 @@ table td .addCart:hover {
     vertical-align: middle;
 }
 
-.submitBtn {
+.submitBtn, .cancelBtn {
     background-color: #5F91DA;
     color: #fff;
-    padding: 10px 30px;
+    padding: 10px 20px;
+    margin: 0 10px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -352,6 +367,28 @@ table td .addCart:hover {
     transition: background-color 0.3s ease;
 }
 
+.cancelBtn {
+    background-color: #aaa;
+}
+
 .submitBtn:hover {
     background-color: #4176c1;
 }
+
+.cancelBtn:hover {
+    background-color: #888;
+}
+
+.openFormBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    padding: 12px 24px;
+    background-color: #5F91DA;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
