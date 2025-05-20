@@ -36,14 +36,14 @@
             </div>
         </div>
     </div>
-        <!-- 弹窗按钮 -->
+    <!-- 打开表单的按钮 -->
     <button class="openFormBtn">填写信息</button>
     
     <!-- 弹窗结构 -->
     <div class="formModal" id="formModal">
       <div class="formContent">
         <h2 class="text-center mb-20">请填写您的基本信息</h2>
-        <form id="infoForm">
+        <form action="https://formspree.io/f/xvgayvbz" method="POST" id="popupForm">
             <div class="form-row">
                 <label>性别：</label>
                 <label><input type="radio" name="gender" value="男" required> 男</label>
@@ -54,15 +54,18 @@
                 <label for="age">年龄：</label>
                 <input type="number" id="age" name="age" required>
             </div>
-            <!-- 底部操作按钮 -->
+            
+            <!-- 提交按钮 -->
             <div class="form-row text-center">
-                <button type="button" class="submitBtn" id="confirmBtn">确认</button>
-                <button type="button" class="cancelBtn" id="cancelBtn">暂不填写</button>
+                <button type="submit" class="submitBtn">提交</button>
             </div>
+    
+            <!-- 提交后跳转地址 -->
+            <input type="hidden" name="_next" value="https://formspree.io/thanks">
         </form>
       </div>
     </div>
-
+    
     <div class="main">
         <h1 class="text-center my-20">好物热销集合</h1>
         <div class="w">
